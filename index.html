@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forum Post Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <script src="js/app.js" type="module"></script>
+    <h1>Forum Post Management</h1>
+    <div class="container">
+      <button type="button" id="createPostButton">Create Post</button>
+      <button
+        type="button"
+        id="fetchPostsButton"
+        onclick="showHideDisplayPostSection()"
+      >
+        Fetch All Posts
+      </button>
+    </div>
+
+    <form class="create_post" id="createPostSection">
+      <label for="authorId">Please Enter author id</label>
+      <input type="text" id="authorId" name="authorId" value="62" readonly />
+      <label for="postCopy">Please Enter forum copy</label>
+      <input type="text" id="postCopy" name="forumCopy" />
+      <input type="submit" value="create forum" />
+    </form>
+
+    <div id="postCard"></div>
+    <div class="loader" id="loader"></div>
+  </body>
+</html>
